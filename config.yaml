@@ -1,0 +1,26 @@
+# Multi-Asset Algo Trading Backtester Configuration
+
+universe:
+  equities:
+    - AAPL
+    - MSFT
+    - GOOGL
+  etfs:
+    - SPY
+    - QQQ
+    - IWM
+  fx:
+    - EURUSD=X
+    - GBPUSD=X
+
+data:
+  start_date: "2015-01-01"
+  end_date: "2023-12-31"
+  cache_dir: "data/parquet_cache"
+
+backtest:
+  initial_capital: 100000.0
+  commission_fixed: 1.0
+  commission_pct: 0.0005
+  slippage_model: "fixed_bps"
+  slippage_bps: 2.0
